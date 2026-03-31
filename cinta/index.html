@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kejutan Untukmu 🎁</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas untuk Star/Matrix Rain -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Overlay Utama Lapis Atas -->
+    <div class="overlay">
+        <!-- Kotak Kado -->
+        <div id="giftContainer" class="gift-container">
+            <div class="gift-box">🎁</div>
+            <p class="click-hint">Sentuh kadonya ya!</p>
+        </div>
+
+        <!-- Teks Muncul Per Kalimat -->
+        <div id="contentDisplay" class="content-display hidden">
+            <p id="contentText" class="hidden-text"></p>
+        </div>
+
+        <!-- Buku Foto / Polaroid -->
+        <div id="photoBook" class="photo-book hidden">
+            <img id="photoImg" src="" alt="Foto Kenangan">
+            <video id="photoVid" class="hidden" autoplay loop muted playsinline></video>
+            <p class="photo-hint">Ketuk fotonya! ✨</p>
+        </div>
+
+        <!-- Kanvas Confetti/Kembang Api -->
+        <canvas id="fireworkCanvas" class="hidden"></canvas>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://archive.org/download/CanonInD_261/CanoninD.mp3" type="audio/mpeg">
+        Lagu tidak dapat diputar.
+    </audio>
+
+    <!-- Kita masukkan pustaka JS canvas-confetti simpel untuk efek ledakan kado -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
